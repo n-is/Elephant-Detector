@@ -3,9 +3,13 @@
 from mpu6050 import mpu6050
 from RedisQueue import RedisQueue
 import sys
-import struct
+#import struct
 import time
 import os
+
+X_OFFSET = 0.1103
+Y_OFFSET = 0.4614
+Z_OFFSET = -9.1531
 
 # test.py seconds_to_monitor time_duration
 if __name__ == '__main__':
@@ -18,7 +22,7 @@ if __name__ == '__main__':
     if (len(sys.argv)>1):
         monitor_time = int(sys.argv[1])
 
-    if (len(sys.argv)>1):
+    if (len(sys.argv)>2):
         time_duration = float(sys.argv[2])
 
     start = time.time()
@@ -31,7 +35,7 @@ if __name__ == '__main__':
             current = time.time()
             
             acc = mpu.get_accel_data()
-            q.put("{:.4f}, {:.3f}, {:.3f}, {:.3f}\n".format(current-start, acc['x'], acc['y'], acc['z']))
+            q.put("{:.4f}, {:.3f}, {:.3f}, {:.3f}\n".format(current-start, (acc['x']-X_OFFSET), (acc['y']-Y_OFFSET), (acc['z']-Z_OFFSET)))
 
             if ((current-start)>monitor_time):
                 q.put('finished')
