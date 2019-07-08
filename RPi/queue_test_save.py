@@ -10,7 +10,7 @@ if __name__ == '__main__':
     if (len(sys.argv)>1):
         filename = sys.argv[1]
     else:
-        with open("./outputs/next_name", "r+") as name_file:
+        with open("/home/anmol/minor/mpu/outputs/next_name", "r+") as name_file:
             name = name_file.readline().split()[0]
             name_file.seek(0)
             name_file.write(str(int(name)+1))
@@ -30,4 +30,4 @@ if __name__ == '__main__':
                 f.write(data.decode('utf-8'))
     finally:
         f.close()
-        #os.system("bzip2 /home/anmol/minor/mpu/outputs/{}".format(filename))
+        os.system("bzip2 /home/anmol/minor/mpu/outputs/{}".format(filename))
