@@ -17,4 +17,3 @@ function [out] = lpf(in, time, fc)
     end
 
 end
-
