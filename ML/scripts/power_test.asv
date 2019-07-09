@@ -1,0 +1,17 @@
+n = 2000;
+t = Timestamp - Timestamp(1);
+t = t(1:n);
+
+ax_off = mean(Accel_x(1:1000));
+
+Ax = Accel_x - ax_off;
+
+Gx = Gx(1:n);
+
+Gx_P = Power(Gx, 32, 0.1);
+
+subplot(2,1,1);
+plot(t, Gx);
+
+subplot(2,1,2);
+plot(t, Gx_P);
