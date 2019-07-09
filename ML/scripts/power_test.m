@@ -8,7 +8,9 @@ Ax = Accel_x - ax_off;
 
 Ax = Ax(1:n);
 
-Ax_P = Power(Ax, 32, 0.1);
+Ax = tust_lpf_n(Ax, t, 100, 20);
+
+Ax_P = Energy(Ax, 32, 0.1);
 
 subplot(2,1,1);
 plot(t, Ax);

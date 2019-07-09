@@ -20,6 +20,8 @@ subplot(2,1,1);
 stem(f(1:floor(n/2)),amp(1:floor(n/2)), 'Marker', '.');
 ylim([0,15]);
 title('Spectral Analysis Before Filter');
+xlabel('Frequency');
+ylabel('Magnitude');
 
 order = 20;
 Gx_f = tust_lpf_n(Gx, t, 100, order);
@@ -35,6 +37,8 @@ stem(f(1:floor(n/2)),amp(1:floor(n/2)), 'Marker', '.');
 ylim([0,15]);
 
 title('Spectral Analysis After Filter');
+xlabel('Frequency');
+ylabel('Magnitude');
 
 len_data = 50;
 
