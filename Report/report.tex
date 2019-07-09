@@ -1,0 +1,15 @@
+\documentclass[a4paper]{report}
+\usepackage{subfiles}
+\newcommand{\onlyinsubfile}[1]{#1}
+\newcommand{\notinsubfile}[1]{}
+
+\usepackage{listings}
+\usepackage{color}
+
+\begin{document}
+\renewcommand{\onlyinsubfile}[1]{}
+\renewcommand{\notinsubfile}[1]{#1}
+%% my document content
+\subfile{tex/lpf}
+%% more of my document content
+\end{document}

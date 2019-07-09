@@ -1,0 +1,68 @@
+PWD c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report
+INPUT C:\Users\073be\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.tex
+OUTPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.log
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\subfiles\subfiles.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.aux
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.aux
+OUTPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.aux
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\tex\lpf.tex
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\tex\lpf.tex
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\073be\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt9.tfm
+OUTPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.pdf
+INPUT C:\Users\073be\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT c:\Users\073be\OneDrive\Documents\Course-Related\6th Sem\Minor Project\Report\report.aux
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
