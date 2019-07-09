@@ -1,10 +1,6 @@
 \documentclass[report.tex]{subfiles}
 
 
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
 \lstset{frame=tb,
   language=MATLAB,
   aboveskip=5mm,
@@ -24,7 +20,6 @@
 
 \begin{document}
 
-        \section{Low Pass Filter}
         The transfer function of the low pass filter is :
         
         $$
@@ -39,34 +34,34 @@
         If $x(t)$ be the input to the filter and $y(t)$ be the output produced
         by the filter, the above filter in time domain is :
         $$
-        y(t) = \frac{1}{T_s + 2RC} \Bigg [T_s \Bigg (x(t) + x(t-1)\bigg) +
-        (2RC - T_s) y(t-1) \bigg ]
+        y(t) = \frac{1}{T_s + 2RC} \Bigg [T_s \Bigg (x(t) + x(t-1)\Bigg) +
+        (2RC - T_s) y(t-1) \Bigg ]
         $$
         We can easily implement the above filter's form in code. Here $T_s$ is
         the sampling period.
 
         \subsection{Implementation in MATLAB}
         \begin{lstlisting}
-                % Transfer Function of RC circuit
-                % H = 1 / (1 + sRC)
+        % Transfer Function of RC circuit
+        % H = 1 / (1 + sRC)
 
-                function [out] = tust_lpf(in, time, fc)
-                % Apply Low Pass Filter using Tustin's Approximation
+        function [out] = tust_lpf(in, time, fc)
+        % Apply Low Pass Filter using Tustin's Approximation
 
-                        out = zeros(size(in));
-                        out(1) = in(1);
-                        
-                        RC = 1 / (2*pi*fc);
-                        
-                        for i = 2:length(in)
-                                dt = time(i) - time(i-1);
-                                a = 1 / (dt + 2*RC);
-                                b = (2*RC - dt);
-                                out(i) = a * (dt * (in(i) + in(i-1)) ...
-                                        + b * out(i-1));
-                        end
-
+                out = zeros(size(in));
+                out(1) = in(1);
+                
+                RC = 1 / (2*pi*fc);
+                
+                for i = 2:length(in)
+                        dt = time(i) - time(i-1);
+                        a = 1 / (dt + 2*RC);
+                        b = (2*RC - dt);
+                        out(i) = a * (dt * (in(i) + in(i-1)) ...
+                                + b * out(i-1));
                 end
+
+        end
         \end{lstlisting}
         
 \end{document}

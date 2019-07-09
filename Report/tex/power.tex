@@ -1,0 +1,71 @@
+\documentclass[report.tex]{subfiles}
+
+
+\lstset{frame=tb,
+  language=MATLAB,
+  aboveskip=5mm,
+  belowskip=5mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=8
+}
+
+\begin{document}
+
+        We calculated the average energy in a given window. We used the rolling
+        technique so that the chances of missing out any data is less. We used
+        the \emph{Parseval's Theorem} to calculate the average energy over the
+        window.
+
+        According to \emph{Parseval's Theorem}, if $x[k]$ and $X[f]$ are the
+        pair of discrete time Fourier sequences, where $x[k]$ is the discrete
+        time sequence and $X[f]$ is its corresponding DFT, the energy of the
+        aperiodic sequence of length can be expressed in terms of its N-point
+        DFT as follows:
+        $$
+        E_x = \frac{1}{N} \sum_{f = 0}^{N - 1} \bigg | X[f] \bigg |^2
+        $$
+
+        \subsection{Implementation in MATLAB}
+        \begin{lstlisting}
+        % Apply Parseval's Theorem to calculate the
+        % instantaeneous energy(power) of the input signal
+
+        function [pars] = Energy(in, win_sz, roll_factor)
+        % Gives the instantaneous energy (power) of the
+        % signal according to the win_sz and the roll_factor
+
+                roll_sz = floor(win_sz * roll_factor);
+                
+                n = length(in);
+                pars = zeros(size(in));
+                
+                % Make 'n' a multiple of window size
+                n = win_sz * floor(n / win_sz);
+                
+                for i = 1:roll_sz:(n - win_sz)
+                        x = in(i : i+win_sz);
+                        
+                        y = fft(x);     % Apply Fast Fourier Transform
+                        amp = abs(y);   % Get coefficients after 
+                                        % transformation
+
+                        % Calculate Power using Parseval's Theorem
+                        % E = sum |X(f)|^2
+                        % P = (1 / N) * E
+                        pars(i) = amp' * amp / win_sz;
+                        
+                end
+
+        end
+        \end{lstlisting}
+        
+\end{document}
