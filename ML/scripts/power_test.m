@@ -22,4 +22,4 @@ subplot(2,1,2);
 plot(t, Ax_P);
 title("Accelerometer Signal's Power");
 xlabel('time');
-ylabel('Power');
+ylabel('Average Energy');

@@ -1,9 +1,9 @@
 % Apply Parseval's Theorem to calculate the
-% average energy of the input signal
+% instantaeneous energy(power) of the input signal
 
 function [pars] = Energy(in, win_sz, roll_factor)
-% Gives the average energy of the signal
-% according to the win_sz and the roll_factor
+% Gives the average energy (power) of the
+% signal according to the win_sz and the roll_factor
 
     roll_sz = floor(win_sz * roll_factor);
     
@@ -19,9 +19,9 @@ function [pars] = Energy(in, win_sz, roll_factor)
         y = fft(x);     % Apply Fast Fourier Transform
         amp = abs(y);   % Get coefficients after transformation
 
-        % Calculate Energy using Parseval's Theorem
+        % Calculate Power using Parseval's Theorem
         % E = sum |X(f)|^2
-        % E_av = (1 / N) * E
+        % P = (1 / N) * E
         pars(i) = amp' * amp / win_sz;
         
     end
