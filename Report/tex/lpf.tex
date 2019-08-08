@@ -40,6 +40,16 @@
         We can easily implement the above filter's form in code. Here $T_s$ is
         the sampling period.
 
+        If $f_c$ be the cut-off frequency of the low pass filter, we can find
+        $RC$ as,
+        $$
+        f_c = \frac{1}{2 \pi RC}
+        $$
+        $$
+        \Rightarrow
+        RC = \frac{1}{2 \pi f_c}
+        $$
+
         \subsection{Implementation in MATLAB}
         \begin{lstlisting}
         % Transfer Function of RC circuit
