@@ -59,7 +59,7 @@ void DataAnalysis(uint32_t data_sample_rate)
         float tot_accel_energy = accel_energy.sum();
         float tot_gyro_energy = gyro_energy.sum();
 
-        if (tot_gyro_energy > 10 && tot_accel_energy > 0) {
+        if (tot_gyro_energy > 300 && tot_accel_energy > 0.01) {
                 // Elephant Detected
                 HAL_GPIO_WritePin(BLED_4_GPIO_Port, BLED_4_Pin, GPIO_PIN_SET);
 
@@ -67,4 +67,5 @@ void DataAnalysis(uint32_t data_sample_rate)
                 ++gElephant_Detected_Count;
                 taskEXIT_CRITICAL();
         }
+        // printf("%ld, %d\n", (int32_t)(tot_accel_energy*1000), (int32_t)(tot_gyro_energy));
 }

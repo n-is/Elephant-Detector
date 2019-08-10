@@ -33,6 +33,7 @@ void StartDefaultTask(void const *argument)
         /* Infinite loop */
         for (;;)
         {
+                HAL_GPIO_WritePin(BLED_4_GPIO_Port, BLED_4_Pin, GPIO_PIN_RESET);
                 osDelay(500);
         }
         /* USER CODE END StartDefaultTask */

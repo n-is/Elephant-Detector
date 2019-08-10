@@ -19,7 +19,7 @@ void Alerting_Init()
         // Switch on the GSM Module
         HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, GPIO_PIN_SET);
         // Wait for the GSM module to be ready
-        osDelay(15000);
+        // osDelay(15000);
 }
 
 const char * gSMS_Start_Command[2] = {  "AT+CMGF=1\r\n",
@@ -40,10 +40,16 @@ void Alerting()
         else {
                 alert_duration = curr_tick - gAlerted_Time;
         }
+        // printf("Alert Duration : %ld\n", alert_duration);
 
         if (alert_duration >= 1000*60*1) {       // 1 minute alert duration
 
-                if (gElephant_Detected_Count > 5) {
+                // printf("Alert Duration\n");
+                HAL_GPIO_WritePin(BLED_3_GPIO_Port, BLED_3_Pin, GPIO_PIN_SET);
+
+                if (gElephant_Detected_Count > 2) {
+
+                        printf("gElephant Detect\n");
 
                         taskENTER_CRITICAL();
                         gElephant_Detected_Count = 0;
@@ -67,5 +73,8 @@ void Alerting()
 
                         HAL_GPIO_WritePin(BLED_1_GPIO_Port, BLED_1_Pin, GPIO_PIN_RESET);
                 }
+        }
+        else {
+                HAL_GPIO_WritePin(BLED_3_GPIO_Port, BLED_3_Pin, GPIO_PIN_RESET);
         }
 }

@@ -88,7 +88,7 @@ osThreadId DataAnalysisHandle;
 uint32_t DataAnalysisBuffer[ 2048 ];
 osStaticThreadDef_t DataAnalysisControlBlock;
 osThreadId AlertingHandle;
-uint32_t AlertingBuffer[ 512 ];
+uint32_t AlertingBuffer[ 2048 ];
 osStaticThreadDef_t AlertingControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -155,7 +155,7 @@ void MX_FREERTOS_Init(void) {
   DataAnalysisHandle = osThreadCreate(osThread(DataAnalysis), NULL);
 
   /* definition and creation of Alerting */
-  osThreadStaticDef(Alerting, Alerting_Thread, osPriorityIdle, 0, 512, AlertingBuffer, &AlertingControlBlock);
+  osThreadStaticDef(Alerting, Alerting_Thread, osPriorityRealtime, 0, 2048, AlertingBuffer, &AlertingControlBlock);
   AlertingHandle = osThreadCreate(osThread(Alerting), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */

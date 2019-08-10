@@ -20,6 +20,7 @@ void DataCollection_Init()
         // Wait for the IMU to switch on properly
         osDelay(500);
         IMU_Init();
+        osDelay(500);
 
         gAccel_Bias = MPU6050_Calc_AccelBias(&Body_IMU, 500);
         gGyro_Bias = MPU6050_Calc_GyroBias(&Body_IMU, 500);
